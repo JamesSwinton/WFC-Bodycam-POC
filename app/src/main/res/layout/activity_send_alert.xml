@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".MainActivity">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:id="@+id/base_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="10dp"
+      android:orientation="vertical">
+
+      <FrameLayout
+        android:id="@+id/capture_container"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center">
+
+      </FrameLayout>
+
+      <EditText
+        android:id="@+id/message_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:singleLine="false"
+        android:minLines="3"
+        android:maxLines="5"
+        android:hint="Message to send"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <View
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+          style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+          android:id="@+id/cancel_button"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="CANCEL"
+          android:layout_weight="2.5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+          style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+          android:id="@+id/send_button"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="SEND"
+          android:layout_weight="2.5"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</layout>
